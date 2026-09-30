@@ -1,0 +1,19 @@
+<mujoco model="nexarm_minimal_scene">
+  <compiler angle="radian"/>
+
+  <default>
+    <geom friction="0.8"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" size="1 1 0.1" type="plane" rgba="0.18 0.22 0.28 1"/>
+    <light name="main_light" pos="0 -0.5 1.5" dir="0 0 -1"/>
+    <body name="table" pos="0 0 0.4">
+      <geom name="table_top" size="0.35 0.45 0.02" type="box" rgba="0.55 0.38 0.22 1"/>
+    </body>
+    <body name="red_block" pos="0 0 0.5">
+      <joint name="red_block_freejoint" type="free"/>
+      <geom name="red_block_geom" size="0.015 0.015 0.015" type="box" friction="1 0.01 0.001" mass="0.05" rgba="0.9 0.05 0.05 1"/>
+    </body>
+  </worldbody>
+</mujoco>
